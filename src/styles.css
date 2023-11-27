@@ -1,0 +1,39 @@
+/* ---RESETS */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---ROOT VARS */
+
+:root {
+  --font: "Figtree", sans-serif;
+  --bg: #1d232a;
+  --txtPrimary: #ffffff;
+  --txtSecondary: #777d89;
+  --txtHeading: #a6adbb;
+}
+
+/* ---MAIN STYLES */
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--txtPrimary);
+}
