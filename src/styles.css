@@ -49,6 +49,10 @@ main {
   justify-content: space-between;
 }
 
+.page-container {
+  padding: 0 40px;
+}
+
 /* ---NAVBAR COMPONENT */
 
 nav {
