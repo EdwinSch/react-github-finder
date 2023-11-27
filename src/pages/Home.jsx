@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <section className="page-container">
+    <section className="main-page-container">
       <h2>Welcome</h2>
     </section>
   );
