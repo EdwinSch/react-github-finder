@@ -23,10 +23,14 @@ ul {
 
 :root {
   --font: "Figtree", sans-serif;
-  --bg: #1d232a;
+  --bgPrimary: #1d232a;
+  --bgSecondary: #191e24;
+  --bgThird: #2a323c;
   --txtPrimary: #ffffff;
   --txtSecondary: #777d89;
   --txtHeading: #a6adbb;
+
+  --inspect: solid red 1px;
 }
 
 /* ---MAIN STYLES */
@@ -34,6 +38,55 @@ ul {
 body {
   min-height: 100vh;
   font-family: var(--font);
-  background-color: var(--bg);
+  background-color: var(--bgPrimary);
   color: var(--txtPrimary);
+}
+
+/* ---NAVBAR COMPONENT */
+
+nav {
+  background: var(--bgSecondary);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .icon {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+
+    & h1 {
+      text-transform: capitalize;
+      color: var(--txtPrimary);
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+/* ---NAV BUTTON COMPONENT */
+
+.nav-btn {
+  padding: 0.5rem;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--txtPrimary);
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 250ms ease;
+
+  &:hover {
+    background-color: var(--bgThird);
+  }
 }
