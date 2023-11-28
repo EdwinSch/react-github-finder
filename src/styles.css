@@ -118,6 +118,53 @@ nav {
   }
 }
 
+/* ---USER RESULTS COMPONENT */
+.grid-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---USER ITEM COMPONENT */
+.user-card {
+  width: 24rem;
+  background-color: var(--bgThird);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 8px 8px 4px var(--bgSecondary);
+
+  & img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+  }
+
+  .info-wrapper {
+    line-height: 24px;
+
+    .username {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .visit-profile-link {
+      color: var(--txtHeading);
+      text-transform: capitalize;
+      font-size: 0.875rem;
+      transition: 250ms ease;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
 /* ---NOT FOUND PAGE */
 .not-found-page {
   text-align: center;
@@ -156,6 +203,7 @@ footer {
 }
 
 /* ---LOADER COMPONENT */
+
 .loader {
   margin: 0 auto;
   width: 4rem;

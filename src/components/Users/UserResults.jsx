@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UserItem from "./UserItem";
 import Loader from "../Layout/Loader";
 
 const UserResults = () => {
@@ -28,7 +29,7 @@ const UserResults = () => {
   return (
     <div className="grid-container">
       {users.map((user) => {
-        return <h3>{user.login}</h3>;
+        return <UserItem key={user.id} {...user} />;
       })}
     </div>
   );
