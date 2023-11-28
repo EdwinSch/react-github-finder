@@ -29,7 +29,8 @@ ul {
   --txtPrimary: #ffffff;
   --txtSecondary: #777d89;
   --txtHeading: #a6adbb;
-  --accent: #6d36f1;
+  --accent: #757fff;
+  --accentInv: #00cfb9;
 
   --inspect: solid red 1px;
 }
@@ -152,4 +153,22 @@ footer {
   text-align: center;
   font-size: 0.875rem;
   font-weight: 400;
+}
+
+/* ---LOADER COMPONENT */
+.loader {
+  margin: 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border: solid transparent 1px;
+  border-top: solid var(--accent) 5px;
+  border-bottom: solid var(--accentInv) 5px;
+  border-radius: 50%;
+  animation: spin 600ms ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

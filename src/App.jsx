@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
+// const token = import.meta.env.VITE_GITHUB_TOKEN;
+
 function App() {
   return (
     <Router>
