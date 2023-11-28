@@ -1,26 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import UserItem from "./UserItem";
 import Loader from "../Layout/Loader";
+import GithubContext from "../../context/github/GithubContext";
 
 const UserResults = () => {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { users, isLoading, fetchUsers } = useContext(GithubContext);
 
   useEffect(() => {
     fetchUsers();
   }, []);
-
-  const fetchUsers = async () => {
-    const response = await fetch("https://api.github.com/users", {
-      headers: {
-        Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
-      },
-    });
-
-    const data = await response.json();
-    setUsers(data);
-    setIsLoading(false);
-  };
 
   if (isLoading) {
     return <Loader />;

@@ -5,17 +5,19 @@ import NavButton from "./NavButton";
 const Navbar = () => {
   return (
     <nav>
-      <div className="header-wrapper">
-        <FaGithub className="icon" />
-        <Link to="/">
-          <h1>github finder</h1>
-        </Link>
-      </div>
+      <div className="inner-nav">
+        <div className="header-wrapper">
+          <FaGithub className="icon" />
+          <Link to="/">
+            <h1>github finder</h1>
+          </Link>
+        </div>
 
-      <ul className="nav-btns-wrapper">
-        <NavButton route="/" label="home" />
-        <NavButton route="/about" label="about" />
-      </ul>
+        <ul className="nav-btns-wrapper">
+          <NavButton route="/" label="home" />
+          <NavButton route="/about" label="about" />
+        </ul>
+      </div>
     </nav>
   );
 };
