@@ -3,20 +3,32 @@ import GithubContext from "../../context/github/GithubContext";
 
 const UserSearch = () => {
   const [text, setText] = useState("");
+  const [inputError, setInputError] = useState(false);
 
   const { users, searchUsers, clearUsers } = useContext(GithubContext);
 
-  const handleChange = (event) => setText(event.target.value);
+  const handleChange = (event) => {
+    if (inputError) {
+      setInputError(false);
+    }
+    setText(event.target.value);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchUsers(text);
 
+    if (text === "") {
+      setInputError(true);
+      return;
+    }
+    searchUsers(text);
     setText("");
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      {inputError && <p className="input-error">empty search</p>}
+
       <input
         type="text"
         placeholder="Search GitHub User"
