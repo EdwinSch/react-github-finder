@@ -52,7 +52,7 @@ main {
 }
 
 .main-page-container {
-  padding: 0 20px;
+  padding: 10px 20px;
   max-width: 1280px;
   margin: 0 auto;
 
@@ -162,6 +162,11 @@ form {
     }
   }
 
+  .clear-btn {
+    margin: 10px 0 0 0;
+    display: block;
+  }
+
   @media only screen and (max-width: 600px) {
     & input[type="text"] {
       border-radius: 8px;
@@ -170,6 +175,11 @@ form {
 
     .search-btn {
       border-radius: 8px;
+    }
+
+    .clear-btn {
+      margin: 0 0 0 10px;
+      display: inline;
     }
   }
 }
