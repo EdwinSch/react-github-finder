@@ -1,14 +1,14 @@
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 import UserItem from "./UserItem";
 import Loader from "../Layout/Loader";
 import GithubContext from "../../context/github/GithubContext";
 
 const UserResults = () => {
-  const { users, isLoading, fetchUsers } = useContext(GithubContext);
+  const { users, isLoading } = useContext(GithubContext);
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  // useEffect(() => {
+  //   fetchUsers();
+  // }, []);
 
   if (isLoading) {
     return <Loader />;

@@ -52,7 +52,9 @@ main {
 }
 
 .main-page-container {
-  padding: 0 40px;
+  padding: 0 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 
   @media only screen and (max-width: 380px) {
     padding: 0 15px;
@@ -126,7 +128,54 @@ nav {
   }
 }
 
+/* ---USER SEARCH COMPONENT */
+
+form {
+  & input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    background: rgb(229, 231, 235);
+    padding: 15px 10px;
+    font-family: var(--font);
+    font-size: 1rem;
+    color: black;
+    border: none;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .search-btn {
+    width: 8rem;
+    padding: 15px 10px;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    text-transform: uppercase;
+    background-color: var(--accent);
+    color: var(--txtPrimary);
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 250ms ease;
+
+    &:hover {
+      background-color: #4d10f1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    & input[type="text"] {
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .search-btn {
+      border-radius: 8px;
+    }
+  }
+}
+
 /* ---USER RESULTS COMPONENT */
+
 .grid-container {
   max-width: 1280px;
   margin: 20px auto;
@@ -140,6 +189,7 @@ nav {
 }
 
 /* ---USER ITEM COMPONENT */
+
 .user-card {
   background-color: var(--bgThird);
   padding: 20px;
@@ -177,6 +227,7 @@ nav {
 }
 
 /* ---NOT FOUND PAGE */
+
 .not-found-page {
   text-align: center;
 
