@@ -6,7 +6,7 @@ const UserItem = ({ login, avatar_url }) => {
       <img src={avatar_url} alt="profile avatar" />
       <div className="info-wrapper">
         <p className="username">{login}</p>
-        <Link to={`/users/${login}`} className="visit-profile-link">
+        <Link to={`/user/${login}`} className="visit-profile-link">
           visit profile
         </Link>
       </div>
