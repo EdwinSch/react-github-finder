@@ -61,6 +61,16 @@ main {
   }
 }
 
+.pad-x {
+  padding-right: 60px;
+  padding-left: 60px;
+
+  @media only screen and (max-width: 450px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 h2 {
   font-size: 1.75rem;
 }
@@ -238,6 +248,87 @@ form {
 
       &:hover {
         color: var(--accent);
+      }
+    }
+  }
+}
+
+/* ---USER PAGE */
+
+.userinfo-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  & img {
+    height: 325px;
+    width: 325px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 4px var(--bgSecondary);
+
+    @media only screen and (max-width: 800px) {
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+  .user-wrapper {
+    /* break */
+    .user-header {
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+
+      & h4 {
+        font-size: 1.875rem;
+      }
+      .badge {
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        font-weight: 600;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+      }
+      .badge:nth-child(2) {
+        color: lightgreen;
+        background-color: green;
+      }
+      .badge:nth-child(3) {
+        color: lightblue;
+        background-color: blue;
+      }
+    }
+
+    .username {
+      font-size: 1.125rem;
+    }
+    .bio {
+      font-size: 1rem;
+      line-height: 22px;
+      margin-top: 20px;
+    }
+    .github-btn {
+      margin-top: 20px;
+      display: block;
+      width: fit-content;
+      padding: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--txtPrimary);
+      text-transform: uppercase;
+      border: solid 1px var(--txtPrimary);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 250ms ease;
+
+      &:hover {
+        color: var(--accentInv);
       }
     }
   }
