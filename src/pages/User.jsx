@@ -3,6 +3,7 @@ import GithubContext from "../context/github/GithubContext";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Layout/Loader";
 import NavButton from "../components/Layout/NavButton";
+import Card from "../components/Layout/Card";
 import { FaCodepen, FaStore, FaUsers, FaUserFriends } from "react-icons/fa";
 
 const User = () => {
@@ -39,6 +40,7 @@ const User = () => {
   return (
     <section className="main-page-container pad-x">
       <NavButton route="/" label="< back to search" />
+      {/* Userinfo */}
       <div className="userinfo-container">
         <img src={avatar_url} alt="user avatar" />
 
@@ -58,6 +60,12 @@ const User = () => {
           >
             visit github profile
           </a>
+          {/* Cards */}
+          <div className="cards-wrapper">
+            <Card label="location" info={location} />
+            <Card label="website" info={blog} />
+            <Card label="X" info={`@${twitter_username}`} />
+          </div>
         </div>
       </div>
     </section>

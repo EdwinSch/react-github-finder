@@ -260,7 +260,7 @@ form {
   display: flex;
   gap: 20px;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }
 
@@ -331,6 +331,32 @@ form {
         color: var(--accentInv);
       }
     }
+    .cards-wrapper {
+      margin-top: 20px;
+      display: flex;
+
+      @media only screen and (max-width: 700px) {
+      flex-direction: column;
+    
+    }
+  }
+}
+
+/* ---CARD COMPONENT */
+.card-container {
+  background-color: var(--bgThird);
+  width: 100%;
+  padding: 15px;
+  box-shadow: 8px 8px 4px var(--bgSecondary);
+  line-height: 22px;
+  border-left: solid white 1px;
+
+  .card-label {
+    text-transform: capitalize;
+    color: var(--txtHeading);
+  }
+  .card-info {
+    font-weight: 800;
   }
 }
 
