@@ -62,9 +62,22 @@ const User = () => {
           </a>
           {/* Cards */}
           <div className="cards-wrapper">
-            <Card label="location" info={location} />
-            <Card label="website" info={blog} />
-            <Card label="X" info={`@${twitter_username}`} />
+            {/* Location */}
+            {!location || (
+              <Card type="card-container-sm" label="location" info={location} />
+            )}
+            {/* Website */}
+            {!blog || (
+              <Card type="card-container-sm" label="website" info={blog} />
+            )}
+            {/* Twitter */}
+            {!twitter_username || (
+              <Card
+                type="card-container-sm"
+                label="X"
+                info={`@${twitter_username}`}
+              />
+            )}
           </div>
         </div>
       </div>

@@ -279,6 +279,8 @@ form {
 
 .user-wrapper {
   /* break */
+  width: 100%;
+
   .user-header {
     display: flex;
     align-items: flex-end;
@@ -343,7 +345,7 @@ form {
 }
 
 /* ---CARD COMPONENT */
-.card-container {
+.card-container-sm {
   background-color: var(--bgThird);
   width: 100%;
   padding: 15px;
