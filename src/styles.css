@@ -275,144 +275,144 @@ form {
       width: 250px;
     }
   }
+}
 
-  .user-wrapper {
-    /* break */
-    .user-header {
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
+.user-wrapper {
+  /* break */
+  .user-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
 
-      & h4 {
-        font-size: 1.875rem;
-      }
-      .badge {
-        margin-bottom: 5px;
-        text-transform: capitalize;
-        font-weight: 600;
-        padding: 3px 5px;
-        border-radius: 5px;
-        font-size: 0.75rem;
-        letter-spacing: 0.5px;
-      }
-      .badge:nth-child(2) {
-        color: lightgreen;
-        background-color: green;
-      }
-      .badge:nth-child(3) {
-        color: lightblue;
-        background-color: blue;
-      }
+    & h4 {
+      font-size: 1.875rem;
     }
-
-    .username {
-      font-size: 1.125rem;
-    }
-    .bio {
-      font-size: 1rem;
-      line-height: 22px;
-      margin-top: 20px;
-    }
-    .github-btn {
-      margin-top: 20px;
-      display: block;
-      width: fit-content;
-      padding: 10px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--txtPrimary);
-      text-transform: uppercase;
-      border: solid 1px var(--txtPrimary);
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 250ms ease;
-
-      &:hover {
-        color: var(--accentInv);
-      }
-    }
-    .cards-wrapper {
-      margin-top: 20px;
-      display: flex;
-
-      @media only screen and (max-width: 700px) {
-        flex-direction: column;
-      }
-    }
-  }
-
-  /* ---CARD COMPONENT */
-  .card-container {
-    background-color: var(--bgThird);
-    width: 100%;
-    padding: 15px;
-    box-shadow: 8px 8px 4px var(--bgSecondary);
-    line-height: 22px;
-    border-left: solid white 1px;
-
-    .card-label {
+    .badge {
+      margin-bottom: 5px;
       text-transform: capitalize;
-      color: var(--txtHeading);
+      font-weight: 600;
+      padding: 3px 5px;
+      border-radius: 5px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
     }
-    .card-info {
-      font-weight: 800;
+    .badge:nth-child(2) {
+      color: lightgreen;
+      background-color: green;
     }
-  }
-
-  /* ---NOT FOUND PAGE */
-
-  .not-found-page {
-    text-align: center;
-
-    .home-btn {
-      margin: 20px auto;
-      padding: 1rem;
-      font-family: var(--font);
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--txtPrimary);
-      background-color: var(--accent);
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: 250ms ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      &:hover {
-        background-color: #4d10f1;
-      }
+    .badge:nth-child(3) {
+      color: lightblue;
+      background-color: blue;
     }
   }
 
-  /* ---FOOTER COMPONENT */
-
-  footer {
-    background: var(--bgSecondary);
-    padding: 1rem;
-    text-align: center;
+  .username {
+    font-size: 1.125rem;
+  }
+  .bio {
+    font-size: 1rem;
+    line-height: 22px;
+    margin-top: 20px;
+  }
+  .github-btn {
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    padding: 10px;
     font-size: 0.875rem;
-    font-weight: 400;
-  }
+    font-weight: 600;
+    color: var(--txtPrimary);
+    text-transform: uppercase;
+    border: solid 1px var(--txtPrimary);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 250ms ease;
 
-  /* ---LOADER COMPONENT */
-
-  .loader {
-    margin: 0 auto;
-    width: 4rem;
-    height: 4rem;
-    border: solid transparent 1px;
-    border-top: solid var(--accent) 5px;
-    border-bottom: solid var(--accentInv) 5px;
-    border-radius: 50%;
-    animation: spin 600ms ease-in-out infinite;
-  }
-
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
+    &:hover {
+      color: var(--accentInv);
     }
+  }
+  .cards-wrapper {
+    margin-top: 20px;
+    display: flex;
+
+    @media only screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+}
+
+/* ---CARD COMPONENT */
+.card-container {
+  background-color: var(--bgThird);
+  width: 100%;
+  padding: 15px;
+  box-shadow: 8px 8px 4px var(--bgSecondary);
+  line-height: 22px;
+  border-left: solid white 1px;
+
+  .card-label {
+    text-transform: capitalize;
+    color: var(--txtHeading);
+  }
+  .card-info {
+    font-weight: 800;
+  }
+}
+
+/* ---NOT FOUND PAGE */
+
+.not-found-page {
+  text-align: center;
+
+  .home-btn {
+    margin: 20px auto;
+    padding: 1rem;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--txtPrimary);
+    background-color: var(--accent);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 250ms ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:hover {
+      background-color: #4d10f1;
+    }
+  }
+}
+
+/* ---FOOTER COMPONENT */
+
+footer {
+  background: var(--bgSecondary);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* ---LOADER COMPONENT */
+
+.loader {
+  margin: 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border: solid transparent 1px;
+  border-top: solid var(--accent) 5px;
+  border-bottom: solid var(--accentInv) 5px;
+  border-radius: 50%;
+  animation: spin 600ms ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
