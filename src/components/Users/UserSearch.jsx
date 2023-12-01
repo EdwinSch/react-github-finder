@@ -8,9 +8,6 @@ const UserSearch = () => {
   const { users, searchUsers, clearUsers } = useContext(GithubContext);
 
   const handleChange = (event) => {
-    if (inputError) {
-      setInputError(false);
-    }
     setText(event.target.value);
   };
 
@@ -19,6 +16,9 @@ const UserSearch = () => {
 
     if (text === "") {
       setInputError(true);
+      setTimeout(() => {
+        setInputError(false);
+      }, 1500);
       return;
     }
     searchUsers(text);
