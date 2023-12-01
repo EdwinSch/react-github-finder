@@ -5,6 +5,7 @@ import Loader from "../components/Layout/Loader";
 import NavButton from "../components/Layout/NavButton";
 import Card from "../components/Layout/Card";
 import { FaCodepen, FaStore, FaUsers, FaUserFriends } from "react-icons/fa";
+import StatsCard from "../components/Layout/StatsCard";
 
 const User = () => {
   const { getUser, user, isLoading } = useContext(GithubContext);
@@ -39,6 +40,7 @@ const User = () => {
 
   return (
     <section className="main-page-container pad-x">
+      {/* home btn */}
       <NavButton route="/" label="< back to search" />
       {/* Userinfo */}
       <div className="userinfo-container">
@@ -80,6 +82,25 @@ const User = () => {
             )}
           </div>
         </div>
+      </div>
+      {/* Stats Cards */}
+      <div className="stat-cards-row">
+        <StatsCard label="followers" stat={followers} icon={<FaUsers />} />
+        <StatsCard
+          label="following"
+          stat={following}
+          icon={<FaUserFriends />}
+        />
+        <StatsCard
+          label="public repos"
+          stat={public_repos}
+          icon={<FaCodepen />}
+        />
+        <StatsCard
+          label="public gists"
+          stat={public_gists}
+          icon={<FaStore />}
+        />
       </div>
     </section>
   );
