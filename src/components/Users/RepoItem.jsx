@@ -1,13 +1,7 @@
-import { FaLink } from "react-icons/fa";
+import { FaLink, FaStar } from "react-icons/fa";
+import { BiFork } from "react-icons/bi";
 
-const RepoItem = ({
-  html_url,
-  name,
-  description,
-  watchers_count,
-  open_issues,
-  forks,
-}) => {
+const RepoItem = ({ html_url, name, stargazers_count, forks }) => {
   return (
     <article className="repo-item-wrapper">
       <a href={html_url} className="repo-link" target="_blank" rel="norefferer">
@@ -16,6 +10,16 @@ const RepoItem = ({
         </span>
         {name}
       </a>
+      <div className="badge-wrapper">
+        <p className="badge-stat">
+          <FaStar style={{ marginBottom: 4 }} />
+          {stargazers_count}
+        </p>
+        <p className="badge-stat">
+          <BiFork style={{ marginBottom: 4 }} />
+          {forks}
+        </p>
+      </div>
     </article>
   );
 };

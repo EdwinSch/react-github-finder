@@ -67,7 +67,7 @@ export const GithubProvider = ({ children }) => {
     // params
     const params = new URLSearchParams({
       sort: "created",
-      per_page: 10,
+      per_page: 8,
     });
 
     const response = await fetch(
