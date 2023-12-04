@@ -267,8 +267,8 @@ form {
   }
 
   & img {
-    height: 325px;
-    width: 325px;
+    height: 300px;
+    width: 300px;
     border-radius: 20px;
     box-shadow: 8px 8px 4px var(--bgSecondary);
 
@@ -494,6 +494,14 @@ form {
       background-color: #4d10f1;
     }
   }
+}
+
+/* ---ABOUT PAGE */
+
+.about-txt {
+  margin-top: 10px;
+  line-height: 22px;
+  color: var(--txtHeading);
 }
 
 /* ---FOOTER COMPONENT */

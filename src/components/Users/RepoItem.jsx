@@ -6,7 +6,7 @@ const RepoItem = ({ html_url, name, stargazers_count, forks }) => {
     <article className="repo-item-wrapper">
       <a href={html_url} className="repo-link" target="_blank" rel="norefferer">
         <span>
-          <FaLink />
+          <FaLink size={16} />
         </span>
         {name}
       </a>
