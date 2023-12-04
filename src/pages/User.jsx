@@ -6,9 +6,11 @@ import NavButton from "../components/Layout/NavButton";
 import Card from "../components/Layout/Card";
 import { FaCodepen, FaStore, FaUsers, FaUserFriends } from "react-icons/fa";
 import StatsCard from "../components/Layout/StatsCard";
+import RepoList from "../components/Users/RepoList";
 
 const User = () => {
-  const { getUser, user, isLoading } = useContext(GithubContext);
+  const { getUser, user, isLoading, getUserRepos, repos } =
+    useContext(GithubContext);
   const params = useParams();
 
   // destructure
@@ -31,7 +33,7 @@ const User = () => {
 
   useEffect(() => {
     getUser(params.login);
-    // getUserRepos(params.login);
+    getUserRepos(params.login);
   }, []);
 
   if (isLoading) {
@@ -102,6 +104,7 @@ const User = () => {
           icon={<FaStore />}
         />
       </div>
+      <RepoList repos={repos} />
     </section>
   );
 };

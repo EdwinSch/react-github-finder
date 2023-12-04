@@ -162,6 +162,7 @@ form {
   .search-btn {
     width: 8rem;
     padding: 15px 10px;
+    margin-right: 10px;
     border-radius: 0 8px 8px 0;
     border: none;
     text-transform: uppercase;
@@ -198,11 +199,6 @@ form {
 
     .search-btn {
       border-radius: 8px;
-    }
-
-    .clear-btn {
-      margin: 0 0 0 10px;
-      display: inline;
     }
   }
 }
