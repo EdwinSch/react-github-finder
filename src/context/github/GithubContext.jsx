@@ -3,7 +3,7 @@ import githubReducer from "./GithubReducer";
 
 const GithubContext = createContext();
 const GITHUB_URL = "https://api.github.com";
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
+// const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
 export const GithubProvider = ({ children }) => {
   const initialState = {
@@ -24,11 +24,7 @@ export const GithubProvider = ({ children }) => {
       q: text,
     });
 
-    const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
-    });
+    const response = await fetch(`${GITHUB_URL}/search/users?${params}`);
     const { items } = await response.json();
 
     dispatch({
@@ -41,11 +37,7 @@ export const GithubProvider = ({ children }) => {
   const getUser = async (login) => {
     setLoading();
 
-    const response = await fetch(`${GITHUB_URL}/users/${login}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
-    });
+    const response = await fetch(`${GITHUB_URL}/users/${login}`);
 
     if (response.status === 404) {
       window.location = "/notfound";
@@ -71,12 +63,7 @@ export const GithubProvider = ({ children }) => {
     });
 
     const response = await fetch(
-      `${GITHUB_URL}/users/${login}/repos?${params}`,
-      {
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-        },
-      }
+      `${GITHUB_URL}/users/${login}/repos?${params}`
     );
     const data = await response.json();
 
