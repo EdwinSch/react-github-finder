@@ -398,6 +398,48 @@ form {
   }
 }
 
+/* ---REPO LIST COMPONENT */
+
+.repolist-container {
+  margin-top: 20px;
+  background-color: var(--bgThird);
+  width: 100%;
+  padding: 20px;
+  box-shadow: 8px 8px 4px var(--bgSecondary);
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  & h5 {
+    margin-bottom: 10px;
+    font-size: 1.375rem;
+    text-transform: capitalize;
+  }
+}
+
+/* ---REPO ITEM COMPONENT */
+.repo-item-wrapper {
+  background: var(--bgPrimary);
+  padding: 20px;
+  border-radius: 8px;
+
+  .repo-link {
+    width: fit-content;
+    color: var(--txtPrimary);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: top;
+    gap: 10px;
+    transition: 200ms ease;
+
+    &:hover {
+      color: var(--accentInv);
+    }
+  }
+}
+
 /* ---NOT FOUND PAGE */
 
 .not-found-page {
