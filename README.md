@@ -2,7 +2,7 @@
 
 This React project interacts with the GitHub API. Users can search GitHub users by name and view detailed info about personal info and repositories. Showcasing: API usage, components, page routing, context, reducer and dynamic styling. <br/>
 
-**Please Note**: The GitHub API has a default rate limit of 10 requests/minute. For security reason this project does not include any tokens which upgrade the rate limit.
+**Please Note**: The GitHub API has a default rate limit of 10 requests/minute. For security reasons this project does not include any tokens which upgrade the rate limit.
 
 ### Live Demo
 
@@ -15,6 +15,8 @@ This React project interacts with the GitHub API. Users can search GitHub users 
 - Vite
 - (NPM) React Router Dom
 - (NPM) React Icons
+
+↔️ [GitHub API](https://api.github.com/)
 
 #### 💻 Run this project
 
